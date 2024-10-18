@@ -35,3 +35,31 @@ body {
     color: #3a3a3a;
     font-weight: 600;
 }
+
+.btn {
+    background: #f8f8f8;
+    color: #3a3a3a;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #3a3a3a;
+    font-size: 15px;
+    padding: 5px;
+    text-align: left;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.btn:hover{
+    background: #000000;
+    color: #f8f8f8;
+}
+
+#next-btn {
+    background: #3a3a3a;
+    color: #fafafa;
+    border-radius: 4px;
+    width: 150px;
+    margin: 20px auto;
+    padding: 10px;
+    display: block;
+}
