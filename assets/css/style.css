@@ -63,3 +63,7 @@ body {
     padding: 10px;
     display: none;
 }
+
+#image {
+    display: none;
+}
