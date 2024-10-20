@@ -1,6 +1,6 @@
 /* DOM Elements declaration */
 
-const img = document.getElementById("image");
+
 const questionsElement = document.getElementById("questions");
 const answersElement = document.getElementById("answers");
 const nextButton = document.getElementById("next-btn");
@@ -22,11 +22,11 @@ const questions = [
         ]  
     },
     {
-        question: "Which of the following is a tape?",
+        question: '<img id="img1" src="assets/images/tape.webp" alt="tape">',
         answers: [
-             {img: "[1]", correct: false},
-             {img: "[2]", correct: false},
-             {img: "[3]", correct: true}        
+             {text: "This is a tape measure", correct: true},
+             {text: "This is a grip plier", correct: false},
+             {text: "This is a spanner", correct: false}        
         ]
     },
     {
@@ -46,11 +46,11 @@ const questions = [
         ]
     },
     {
-        question: document.getElementById("image")[0],
+        question: '<img id="img1" src="assets/images/adjustable spanner.jpg" alt="adjustable spanner">',
         answers: [
-             {img: "[1]", correct: true},
-             {img: "[2]", correct: false},
-             {img: "[3]", correct: false}        
+             {text: "This is a set of adjustable spanners", correct: true},
+             {text: "A set of screw drivers", correct: false},
+             {text: "A set", correct: false}        
         ]
     },
     {
@@ -62,11 +62,11 @@ const questions = [
         ]
     },
     {
-        question: "Which of the following is called hammer?",
+        question: '<img id="img1" src="assets/images/hammer.webp" alt="hammer">',
         answers: [
-             {img: "[1]", correct: false},
-             {img: "[2]", correct: true},
-             {img: "[3]", correct: true}        
+             {text: "This is a set of pencils", correct: false},
+             {text: "This is a set of hammers", correct: true},
+             {text: "These are not tools", correct: false}        
         ]
     }
 ];
@@ -85,8 +85,10 @@ function showQuestion() {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
+    
     questionsElement.innerHTML = questionNo + "." + currentQuestion.question;
-
+   
+    
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
