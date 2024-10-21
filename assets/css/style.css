@@ -1,3 +1,4 @@
+/* This CSS style was written by the guidance of a youtube tutorial video */
 /* General HTML style */
 
 * {
@@ -9,6 +10,8 @@
 
 body {
     background: url(../images/junior-mechanic.jpg) no-repeat center center/cover;
+    height: 750px;
+    width: 100%;
 }
 
 .game {
@@ -17,6 +20,7 @@ body {
     max-width: 600px;
     width: 80%;
     padding: 30px;
+    bottom: 5px;
 }
 
 .game h1 {

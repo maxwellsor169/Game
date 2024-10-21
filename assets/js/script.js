@@ -1,4 +1,8 @@
-/* DOM Elements declaration */
+
+/** 
+ * Code below was written from a tutorial guide on https://www.youtube.com/watch?v=PBcqGxrr9g8&t=179s
+ *  DOM Elements declaration */
+
 
 
 const questionsElement = document.getElementById("questions");
@@ -101,14 +105,14 @@ function showQuestion() {
     });
 }
 
-function resetState() {
+function resetState(){
     nextButton.style.display = "none";
     while(answersElement.firstChild){
         answersElement.removeChild(answersElement.firstChild);
     }
-};
+}
 
-function selectAnswer(e) {
+function selectAnswer(e){
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect){
@@ -126,12 +130,20 @@ function selectAnswer(e) {
     nextButton.style.display = "block";
 }
 
+function showScore(){
+    resetState();
+    questionsElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextButton.style.display = "block";
+    nextButton.innerHTML = "Play Again";
+    
+}
+
 function handleNextButton(){
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length){
         showQuestion();
     } else {
-        showscore();
+        showScore();
     }
 
 }
