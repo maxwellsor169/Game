@@ -30,7 +30,7 @@ const questions = [
         ]
     },
     {
-        question: "Pliers are simple tools used to hold electrical cables when working on an electrical component",
+        question: "A Plier is a simple tool used to hold electrical cables when working on an electrical component",
         answers: [
             {text: "No", correct: false},
             {text: "None", correct: false},

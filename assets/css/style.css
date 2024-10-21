@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: lightblue;
+    background: url(../images/junior-mechanic.jpg) no-repeat center center/cover;
 }
 
 .game {
