@@ -3,8 +3,6 @@
  * Code below was written from a tutorial guide on https://www.youtube.com/watch?v=PBcqGxrr9g8&t=179s
  *  DOM Elements declaration */
 
-
-
 const questionsElement = document.getElementById("questions");
 const answersElement = document.getElementById("answers");
 const nextButton = document.getElementById("next-btn");
@@ -52,8 +50,8 @@ const questions = [
     {
         question: '<img id="img1" src="assets/images/adjustable spanner.jpg" alt="adjustable spanner">',
         answers: [
-             {text: "This is a set of adjustable spanners", correct: true},
              {text: "A set of screw drivers", correct: false},
+             {text: "This is a set of adjustable spanners", correct: true},
              {text: "A set", correct: false}        
         ]
     },
@@ -72,6 +70,14 @@ const questions = [
              {text: "This is a set of hammers", correct: true},
              {text: "These are not tools", correct: false}        
         ]
+    },
+    {
+        question: "Allen key is a special type of tool used in loosening and tigthening of allen bolts",
+        answers: [
+            {text: "Yes", correct: true},
+            {text: "None", correct: false},
+            {text: "No", correct: false}
+        ] 
     }
 ];
 
