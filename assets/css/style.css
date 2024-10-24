@@ -64,7 +64,7 @@ body {
    
 
     #guide-content {
-        background: white;
+        background: lightgreen;
         display: none; 
         border-radius: 10px;
         width: 80%;
@@ -84,6 +84,7 @@ body {
     #guide-content ul {
         padding-left: 0; 
         text-align: left;
+        
     }
 
     #guide-content ul li {
