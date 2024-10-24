@@ -1,3 +1,26 @@
+document.addEventListener("DOMContentLoaded", function() {
+
+    const guideButton = document.getElementById("guide");
+    const guideElement = document.getElementById("guide-content");
+    const closeButton = document.getElementById("close");
+
+    guideButton.addEventListener("click", function() {
+
+        if(guideElement.style.display === "none") {
+            guideElement.style.display = "block";
+        } else {
+            guideElement.style.display = "block";
+        }
+    });
+
+    closeButton.addEventListener("click", function() {
+        guideElement.style.display = "none";
+    });
+})
+
+
+
+
 
 /** 
  * Code below was written from a tutorial guide on https://www.youtube.com/watch?v=PBcqGxrr9g8&t=179s
