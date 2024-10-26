@@ -92,10 +92,15 @@ let counter;
 let timeValue = 15;
 
 function startQuiz() {
+    startTimer(15);
+   
     currentQuestionIndex = 0;
     score =0;
+    
     nextButton.innerHTML = "Next";
     showQuestion();
+    
+    clearInterval(counter);
 }
 
 function showQuestion() {
@@ -104,7 +109,7 @@ function showQuestion() {
     let questionNo = currentQuestionIndex + 1;
     
     questionsElement.innerHTML = questionNo + "." + currentQuestion.question;
-   
+    
     
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -123,10 +128,10 @@ function resetState(){
     while(answersElement.firstChild){
         answersElement.removeChild(answersElement.firstChild);
     }
+    clearInterval(counter);
 }
 
 function selectAnswer(e){
-    clearInterval(counter);
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect){
@@ -142,21 +147,23 @@ function selectAnswer(e){
         button.disabled = true;
     })
     nextButton.style.display = "block";
+    clearInterval(counter);
 }
 
 function showScore(){
     resetState();
     questionsElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    clearInterval(counter);
     nextButton.style.display = "block";
     nextButton.innerHTML = "Play Again";
-    
+
 }
 
 function handleNextButton(){
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length){
         showQuestion();
-        clearInterval(counter);
+        
         startTimer(timeValue);
     }else{
         showScore();
@@ -165,13 +172,13 @@ function handleNextButton(){
 }
 
 nextButton.addEventListener("click", ()=>{
+    clearInterval(counter);
     if(currentQuestionIndex < questions.length){
         handleNextButton();
     } 
     else {
         startQuiz();
     }
-    startTimer(15);
     
 });
 
@@ -184,14 +191,14 @@ function startTimer(time){
         time--;
         if(time < 9){
             let addZero = timeCount.textContent;
-            timeCount.textContent = "0"+ addZero;
+            timeCount.textContent = "0" + addZero;
               
      }   
         if(time < 0){
             clearInterval(counter);
             timeCount.textContent = "00";
     }    
-    }
+    };
 }
 
 startQuiz();
