@@ -21,7 +21,7 @@ body {
 }
 
 /* Style for the index.html page */
-
+/* The following css code where written with inspiration and guide from (https://github.com/Patteerrik/sports-quiz/blob/main/assets/css/style.css) */
 @media screen and (min-width: 280px) {
 
     .intro {
@@ -154,8 +154,11 @@ body {
 @media screen and (min-width: 1200px) {
     #content p {
         padding-top: 10px;
-        justify-content: left;
-        
+        margin-left: 2px;
+        max-width: 85%;    
+    }
+    #content h1 {
+        max-width: 50%;
     }
 
 

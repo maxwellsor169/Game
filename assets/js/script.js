@@ -1,5 +1,6 @@
 /** 
- * The following HTML codes were written under the inspiration and guide of a code institute student project sample
+ * The following HTML codes were written under the inspiration and guide of a 
+ * code institute student project sample(https://github.com/Patteerrik/sports-quiz/blob/main/assets/js/rules.js)
  * This code is to load the welcome page before the quiz page */
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -183,14 +184,14 @@ function selectAnswer(e){     // this function helps to declare that an answer s
             button.classList.add("correct");
         }
         button.disabled = true;
-    })
+    });
     nextButton.style.display = "block";
     clearInterval(counter);
 }
 
 function showScore(){   // this function helps to declare the final score at the end of the quiz
     resetState();
-    questionsElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    questionsElement.innerHTML = `Well done for getting this far, Your score is ${score} out of ${questions.length}!`;
     
     nextButton.style.display = "block";
     
@@ -199,7 +200,9 @@ function showScore(){   // this function helps to declare the final score at the
 }
 
 /**
- * this is ofr the next button move to next question when handled or start the quiz again when all questions are answered
+ * the following code was written under the guide and inspiration of a tutorial video (https://www.youtube.com/watch?v=WUBhpSRS_fk&t=2469s)
+ * all the code for the timer was written with a guide from the above video url
+ * this is for the next button to move to next question when handled or start the quiz again when all questions are answered
  */
 function handleNextButton(){   
     currentQuestionIndex++;
