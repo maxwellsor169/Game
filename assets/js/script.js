@@ -1,34 +1,9 @@
 /** 
- * The following HTML codes were written under the inspiration and guide of a code institute student project sample
- * This code is to load the welcome page before the quiz page */
-
-document.addEventListener("DOMContentLoaded", function() {
-
-    const guideButton = document.getElementById("guide");
-    const guideElement = document.getElementById("guide-content");
-    const closeButton = document.getElementById("close");
-
-    guideButton.addEventListener("click", function() {
-
-        if(guideElement.style.display === "none") {
-            guideElement.style.display = "block";
-        } else {
-            guideElement.style.display = "block";
-        }
-    });
-
-    closeButton.addEventListener("click", function() {
-        guideElement.style.display = "none";
-    });
-})
-
-
-
-
-
-/** 
  * Code below was written from a tutorial guide on https://www.youtube.com/watch?v=PBcqGxrr9g8&t=179s
  *  DOM Elements declaration */
+
+const game_Element = document.querySelector(".game");
+const timeCount = game_Element.querySelector(".timer .timer_sec");
 
 const questionsElement = document.getElementById("questions");
 const answersElement = document.getElementById("answers");
@@ -113,6 +88,8 @@ const questions = [
  */
 let currentQuestionIndex = 0;
 let score = 0;
+let counter;
+let timeValue = 15;
 
 function startQuiz() {
     currentQuestionIndex = 0;
@@ -149,6 +126,7 @@ function resetState(){
 }
 
 function selectAnswer(e){
+    clearInterval(counter);
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect){
@@ -178,7 +156,9 @@ function handleNextButton(){
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length){
         showQuestion();
-    } else {
+        clearInterval(counter);
+        startTimer(timeValue);
+    }else{
         showScore();
     }
 
@@ -187,9 +167,31 @@ function handleNextButton(){
 nextButton.addEventListener("click", ()=>{
     if(currentQuestionIndex < questions.length){
         handleNextButton();
-    } else {
+    } 
+    else {
         startQuiz();
     }
-})
+    startTimer(15);
+    
+});
+
+// this function will start the time
+
+function startTimer(time){
+    counter = setInterval(timer, 1000);
+    function timer(){
+        timeCount.textContent = time;
+        time--;
+        if(time < 9){
+            let addZero = timeCount.textContent;
+            timeCount.textContent = "0"+ addZero;
+              
+     }   
+        if(time < 0){
+            clearInterval(counter);
+            timeCount.textContent = "00";
+    }    
+    }
+}
 
 startQuiz();
