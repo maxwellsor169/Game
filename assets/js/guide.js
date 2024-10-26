@@ -19,5 +19,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
     closeButton.addEventListener("click", function() {
         guideElement.style.display = "none";
-    });
+    })
 })

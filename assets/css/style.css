@@ -199,6 +199,10 @@ body {
 
 }
 
+.container {
+    text-align: center;
+}
+
  #time_text {
     font-size: 15px;
     user-select: none;
