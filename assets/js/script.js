@@ -222,8 +222,8 @@ nextButton.addEventListener("click", ()=>{
     } 
     else {
         startQuiz();
-    }  
-})
+    } 
+});
 
 
 function startTimer(time){     // this function will start the timer
@@ -234,13 +234,12 @@ function startTimer(time){     // this function will start the timer
         time--;
         if(time < 9){
             let addZero = timeCount.textContent;
-            timeCount.textContent = "0" + addZero;
-              
+            timeCount.textContent = "0" + addZero;       
      }   
         if(time < 0){
             clearInterval(counter);
             timeCount.textContent = "00";
-    } };
+    } }
 }
 
 startQuiz();
