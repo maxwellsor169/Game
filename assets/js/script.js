@@ -10,17 +10,17 @@ document.addEventListener("DOMContentLoaded", function(){
 
     guideButton.addEventListener("click", function() {
 
-        if(guideElement.style.display === "none") {
+        if(guideElement.style.display === "none") {      //when the guide button is clicked
             guideElement.style.display = "block";
         } else {
             guideElement.style.display = "block";
         }
     });
 
-    closeButton.addEventListener("click", function() {
+    closeButton.addEventListener("click", function() {   // this is to close the guide window
         guideElement.style.display = "none";
     });
-})
+});
 
 
 
@@ -33,9 +33,11 @@ document.addEventListener("DOMContentLoaded", function(){
 const game_Element = document.querySelector(".game");
 const timeCount = game_Element.querySelector(".timer .timer_sec");
 
-const questionsElement = document.getElementById("questions");
+const questionsElement = document.getElementById("questions");  // this call the global Dom element
 const answersElement = document.getElementById("answers");
 const nextButton = document.getElementById("next-btn");
+
+// the quiz questions in a form of an array
 const questions = [
     {
         question: "What mechanical tool is used for tigthening a 13-size bolt?",
@@ -108,6 +110,14 @@ const questions = [
             {text: "None", correct: false},
             {text: "No", correct: false}
         ] 
+    },
+    {
+        question: "To tigthen a bolt, you turn the spanner in a clockwise direction",
+        answers: [
+            {text: "None", correct: false},
+            {text: "Yes", correct: true},
+            {text: "No", correct: false}
+        ] 
     }
 ];
 
@@ -119,7 +129,7 @@ let score = 0;
 let counter;
 let timeValue = 15;
 
-function startQuiz() {
+function startQuiz() {   //this function will initiate the quiz to start
     startTimer(15);
    
     currentQuestionIndex = 0;
@@ -131,7 +141,7 @@ function startQuiz() {
     clearInterval(counter);
 }
 
-function showQuestion() {
+function showQuestion() {        //this function will display the questions when the next button is clicked
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
@@ -139,7 +149,7 @@ function showQuestion() {
     questionsElement.innerHTML = questionNo + "." + currentQuestion.question;
     
     
-    currentQuestion.answers.forEach(answer => {
+    currentQuestion.answers.forEach(answer => {    //this function controls the answers and signal with colors if correct or not
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add("btn");
@@ -151,7 +161,7 @@ function showQuestion() {
     });
 }
 
-function resetState(){
+function resetState(){     // this function disable the other answer buttons when an answer is selected 
     nextButton.style.display = "none";
     while(answersElement.firstChild){
         answersElement.removeChild(answersElement.firstChild);
@@ -159,7 +169,7 @@ function resetState(){
     clearInterval(counter);
 }
 
-function selectAnswer(e){
+function selectAnswer(e){     // this function helps to declare that an answer selected is correct or not
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect){
@@ -178,20 +188,23 @@ function selectAnswer(e){
     clearInterval(counter);
 }
 
-function showScore(){
+function showScore(){   // this function helps to declare the final score at the end of the quiz
     resetState();
     questionsElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-    clearInterval(counter);
+    
     nextButton.style.display = "block";
+    
     nextButton.innerHTML = "Play Again";
-
+    clearInterval(counter);
 }
 
-function handleNextButton(){
+/**
+ * this is ofr the next button move to next question when handled or start the quiz again when all questions are answered
+ */
+function handleNextButton(){   
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length){
         showQuestion();
-        
         startTimer(timeValue);
     }else{
         showScore();
@@ -206,13 +219,12 @@ nextButton.addEventListener("click", ()=>{
     } 
     else {
         startQuiz();
-    }
-    
-});
+    }  
+})
 
-// this function will start the time
 
-function startTimer(time){
+function startTimer(time){     // this function will start the timer
+
     counter = setInterval(timer, 1000);
     function timer(){
         timeCount.textContent = time;
@@ -225,8 +237,7 @@ function startTimer(time){
         if(time < 0){
             clearInterval(counter);
             timeCount.textContent = "00";
-    }    
-    };
+    } };
 }
 
 startQuiz();
