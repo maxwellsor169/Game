@@ -81,7 +81,7 @@ const questions = [
         ]
     },
     {
-        question: '<img id="img1" src="assets/images/adjustable spanner.jpg" alt="adjustable spanner">',
+        question: '<img id="img1" src="assets/images/adjustable.jpg" alt="adjustable">',
         answers: [
              {text: "A set of screw drivers", correct: false},
              {text: "This is a set of adjustable spanners", correct: true},
