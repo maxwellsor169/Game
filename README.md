@@ -60,16 +60,85 @@ The user will get to know the basic mechanical tools and their uses after answer
 
 
 ### CSS 
-  * No errors found on, but a warning for the font family [Jigsaw Validator](https://jigsaw.w3.org/css-validator/validator)
+  * No errors found, but a warning for the font family [Jigsaw Validator](https://jigsaw.w3.org/css-validator/validator)
 
 ![CSS](assets/doc/images/CSS.png)  
 ![Warning](assets/doc/images/Warning.png)
 
 
 ### Java Script
-  * Testing done on java found no error [Jshint Validator](https://jshint.com/)
+  * Testing done on java found no error with [Jshint Validator](https://jshint.com/)
 
 ![Script](assets/doc/images/Script.png)  
+
+
+
+### Bugs
+  * Some bug was identified with the Java script file which was obstracting the display of the quiz guide but was figured out and fixed.
+
+### Ligthhouse Results
+  * Index.html
+
+![LigthIN](assets/doc/images/LigthIN.png)
+
+
+  * Game.html
+
+![LigthG](assets/doc/images/LigthG.png)  
+
+
+### Deployment
+  * This site has been deployed on git hub according to the following steps:
+    * Select the undeployed github-pages link.
+    * Select settings from the buttons displayed on top of the page.
+    * Select pages from the pop up list on the left hand side of the page.
+    * Go to the Build and Deployment section on the new page.
+    * Select main under Branch.
+    * Select root and save.
+    * Refresh page and site is deployed.
+    * The current live deployed page is [Junior-Mechanic-Quiz](https://maxwellsor169.github.io/Junior-Mechanic-Quiz/)
+
+
+
+### Manual Testing
+| Action | Expected Results |
+|--- | --- |
+|Click the guide button|A pop up displays with the quiz guide|
+| Click the X button | This will close the pop up guide window |
+| Select the start link | This will open the page for the quiz |
+| Select an answer | The selected button change colour to green or orange |
+| Click on next | This opens the next question page |
+| Click play again button | This restart the quiz again |
+
+
+### Features Left
+  * The return button to the welcome page.
+  * The feature to display the correct answer when the one selected is wrong.
+
+
+
+### Languages
+  * HTML
+  * Java Script
+  * Css
+
+
+### Credit
+* Content
+  * 1st Youtube tutorial video (https://www.youtube.com/watch?v=PBcqGxrr9g8&t=179s)
+  * 2nd Youtube tutorial video (https://www.youtube.com/watch?v=WUBhpSRS_fk&t=2469s)
+  * Sample project guide from (https://github.com/Patteerrik/sports-quiz/)
+
+* Media  
+  * [Favicon.io](https://favicon.io/) which I used to create the favicons.
+  * All the images used were taken from an open source site. 
+
+|
+
+
+
+
+
 
 
 
