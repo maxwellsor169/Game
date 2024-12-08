@@ -1,9 +1,3 @@
-
-
-
-
-
-
 /** 
  * Code below was written from a tutorial guide on https://www.youtube.com/watch?v=PBcqGxrr9g8&t=179s
  *  DOM Elements declaration */
