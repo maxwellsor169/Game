@@ -54,13 +54,13 @@ body {
 
 
     .start-link {
-        background:white;    
+        background: lightblue;    
         margin-top: 18px;
         color: #000; 
         border: 1px solid #000; 
         border-radius: 5px;
-        font-size: 15px;
-    
+        font-size: 25px;
+        flex-direction: column;
     }
 
    
@@ -70,7 +70,7 @@ body {
         display: none; 
         border-radius: 10px;
         width: 80%;
-        height:50%;
+        height:30%;
         border: 1px solid;
         justify-content: center;
         align-items: center;
@@ -96,6 +96,7 @@ body {
 
     #guide {
         padding: 10px;
+        font-size: 20px;
     }
 
     #close {
@@ -129,8 +130,7 @@ body {
     }
 
     .intro {
-        display: flex;
-        display: block;
+        
         background-color: lightblue;
     }
 
@@ -140,10 +140,11 @@ body {
     }
 
 
-    .start-link .game {
+    .play {
         border-radius: 10px;
         height: 2px;
         background-color: lightblue;
+        justify-self: center;
     }
 
     
