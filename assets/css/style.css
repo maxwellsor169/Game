@@ -90,7 +90,7 @@ body {
     }
 
     #guide-content ul li {
-        font-size: 14px;
+        font-size: 17px;
     }
 
 
@@ -141,10 +141,10 @@ body {
 
 
     .play {
-        border-radius: 10px;
+        border-radius: 8px;
         height: 2px;
         background-color: lightblue;
-        justify-self: center;
+        justify-content: center;
     }
 
     

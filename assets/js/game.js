@@ -101,8 +101,10 @@ let score = 0;
 let counter;
 let timeValue = 15;
 
+
 function startQuiz() {   //this function will initiate the quiz to start
     startTimer(15);
+    
    
     currentQuestionIndex = 0;
     score =0;
@@ -110,13 +112,19 @@ function startQuiz() {   //this function will initiate the quiz to start
     nextButton.innerHTML = "Next";
     showQuestion();
     
+
+    
     clearInterval(counter);
+    startTimer(timeValue);
+    
 }
 
 function showQuestion() {        //this function will display the questions when the next button is clicked
     resetState();
+   
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
+    
     
     questionsElement.innerHTML = questionNo + "." + currentQuestion.question;
     
@@ -195,6 +203,7 @@ nextButton.addEventListener("click", ()=>{
         startQuiz();
     } 
 });
+
 
 
 function startTimer(time){     // this function will start the timer
