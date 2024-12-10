@@ -4,7 +4,7 @@ This is a simple quiz website to test children on the basic knowledge they have 
 
 The user will get to know the basic mechanical tools and their uses after answering the question.
 
-![Responsive](assets/doc/images/Responsive.png)
+![Responsive](assets/doc/images/responsive.png)
 
 
 ## Features
@@ -13,11 +13,11 @@ The user will get to know the basic mechanical tools and their uses after answer
    * This page aslo displays the start link and the button to read the quiz guide from.
 
 
-![welcome1](assets/doc/images/welcome1.png)
+![welcome1](assets/doc/images/welcomep.png)
 
   ### The Guide
   
-  ![Guide](assets/doc/images/Guide.png)
+  ![Guide](assets/doc/images/guide1.png)
 
 
   ### The Quiz page
