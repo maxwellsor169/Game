@@ -115,7 +115,7 @@ function startQuiz() {   //this function will initiate the quiz to start
 
     
     clearInterval(counter);
-    startTimer(timeValue);
+    startTimer(timeValue);   // this line of code will count down the timer when the quiz starts
     
 }
 
@@ -219,7 +219,7 @@ function startTimer(time){     // this function will start the timer
         if(time < 0){
             clearInterval(counter);
             timeCount.textContent = "00";
-            handleNextButton();
+            handleNextButton();      // this code will display the next question when the time run down to zero
     } }
 }
 
