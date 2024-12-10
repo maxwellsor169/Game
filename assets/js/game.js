@@ -219,6 +219,7 @@ function startTimer(time){     // this function will start the timer
         if(time < 0){
             clearInterval(counter);
             timeCount.textContent = "00";
+            handleNextButton();
     } }
 }
 
