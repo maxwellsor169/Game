@@ -136,6 +136,7 @@ The user will get to know the basic mechanical tools and their uses after answer
   * All the images used were taken from an open source site. 
 
 * Final credit is to my mentor (Mr. Gareth McGirr) who gave me the confidence that I can do it.  
+* A credit to Oisin Tohak for helping me fix the bugs in my codes for resubmission.
 
 |
 
