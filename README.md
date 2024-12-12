@@ -75,7 +75,7 @@ The user will get to know the basic mechanical tools and their uses after answer
 
 ### Bugs
   * Some bug was identified with the Java script file which was obstracting the display of the quiz guide but was figured out and fixed.
-  * The timer was noted running at the start of the quiz, so the java script code for index HTML has been copied into a separate File.
+  * The timer was not running at the start of the quiz, so the java script code for index HTML has been copied into a separate File.
   * A code has been added to display the next question at zero countdown of the timer.
 
 ### Ligthhouse Results
