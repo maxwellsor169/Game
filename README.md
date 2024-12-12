@@ -75,6 +75,8 @@ The user will get to know the basic mechanical tools and their uses after answer
 
 ### Bugs
   * Some bug was identified with the Java script file which was obstracting the display of the quiz guide but was figured out and fixed.
+  * The timer was noted running at the start of the quiz, so the java script code for index HTML has been copied into a separate File.
+  * A code has been added to display the next question at zero countdown of the timer.
 
 ### Ligthhouse Results
   * Index.html
@@ -101,14 +103,14 @@ The user will get to know the basic mechanical tools and their uses after answer
 
 
 ### Manual Testing
-| Action | Expected Results |
-|--- | --- |
-|Click the guide button|A pop up displays with the quiz guide|
-| Click the X button | This will close the pop up guide window |
-| Select the start link | This will open the page for the quiz |
-| Select an answer | The selected button change colour to green or orange |
-| Click on next | This opens the next question page |
-| Click play again button | This restart the quiz again |
+| Action | Expected Results | Results |
+|--- | --- | --- |
+|Click the guide button|A pop-up displays the quiz guide| The guide window is displayed |
+| Click the guide closing button | This will close the pop up guide window | The guide window disappers |
+| Select the start link | This will open the page for the quiz | Quiz begins |
+| Select an answer button | The selected button change colour to green or orange | An answer is selected |
+| Click on next | This displays the next question page | A fresh question is displayed |
+| Click play again button | This restart the quiz again | Quiz starts again |
 
 
 ### Features Left
